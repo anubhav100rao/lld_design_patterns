@@ -1,7 +1,3 @@
-Here’s a README for your project, based on the structure and code in your workspace:
-
----
-
 # LLD Design Patterns in Go
 
 This repository demonstrates various Low-Level Design (LLD) patterns implemented in Go, with a focus on practical, real-world examples. Each pattern is organized in its own directory and includes sample code to illustrate its usage.
