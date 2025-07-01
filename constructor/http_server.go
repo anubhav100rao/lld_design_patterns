@@ -33,6 +33,15 @@ func NewServer(cfg Config) Server {
 	return &apiServer{srv: srv}
 }
 
+func NewServerWithNoReadTimeout(cfg Config) Server {
+	return &http.Server{
+		Addr:         cfg.Addr,
+		ReadTimeout:  10000000,
+		WriteTimeout: cfg.WriteTimeout,
+		Handler:      cfg.Handler,
+	}
+}
+
 func (a *apiServer) ListenAndServe() error {
 	return a.srv.ListenAndServe()
 }

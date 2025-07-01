@@ -35,7 +35,7 @@ func NewPaymentProcessor(provider string) (PaymentProcessor, error) {
 }
 
 func RunPaymentProcessorDemo() {
-	processor, err := NewPaymentProcessor("stripe")
+	processor, err := NewPaymentProcessor("paypal")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
