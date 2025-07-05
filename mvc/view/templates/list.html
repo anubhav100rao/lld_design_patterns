@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Articles</title>
+	</head>
+	<body>
+		<h1>Articles</h1>
+		<ul>
+			{{range .}}
+			<li><strong>{{.Title}}</strong>: {{.Content}}</li>
+			{{else}}
+			<li><em>No articles yet.</em></li>
+			{{end}}
+		</ul>
+
+		<h2>Create New Article</h2>
+		<form method="post" action="/articles">
+			<label>Title: <input type="text" name="title" /></label><br />
+			<label
+				>Content:<br />
+				<textarea name="content" rows="4" cols="40"></textarea></label
+			><br />
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
